@@ -15,4 +15,4 @@
 /log/*
 !/log/.keep
 /tmp
-.c9/metadata
+/.c9/
