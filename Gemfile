@@ -55,5 +55,8 @@ group :development, :test do
   gem 'spring'
   # for ERD visualiztion per Bloc checkpoint 303
   gem 'rails-erd'
+  
+  # adding ruby version per heroku suggestion
+  ruby '2.0.0'
 end
 
