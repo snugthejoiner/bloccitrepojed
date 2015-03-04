@@ -58,5 +58,7 @@ group :development, :test do
   
   # adding ruby version per heroku suggestion
   # ruby '2.0.0'
-end
 
+end
+# authentication per checkpoint 308
+gem 'devise'
