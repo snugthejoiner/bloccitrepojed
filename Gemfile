@@ -62,3 +62,4 @@ group :development, :test do
 end
 # authentication per checkpoint 308
 gem 'devise'
+gem 'figaro'
