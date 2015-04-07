@@ -7,13 +7,13 @@
         end
         
         def resolve
-         if !user.present?
-           scope.none
-         elsif user.admin? || user.moderator?
-           scope.all
-         else
-           scope.where(:id => user.id).exists?
-         end
+            if !user.present?
+                scope.none
+            elsif user.admin? || user.moderator?
+                scope.all
+            else
+                scope.where(:id => user.id).exists?
+            end
         end
     end
     
@@ -21,4 +21,7 @@
         true
     end
   
+    def destroy
+        user.present? && (record.user == user || user.admin? || user.moderator?)
+    end
  end
