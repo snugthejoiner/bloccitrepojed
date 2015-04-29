@@ -59,6 +59,7 @@ group :development, :test do
   # adding ruby version per heroku suggestion
   # ruby '2.0.0'
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 
 end
 # authentication per checkpoint 308
