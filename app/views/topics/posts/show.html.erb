@@ -11,7 +11,7 @@
     <p><%= markdown_to_html @post.body %></p>
     <%= image_tag(@post.image.url) if @post.image? %>
     <% @comments.each do |comment| %>
-      <%= render partial: 'comments/comment', locals: {comment: comment} %>
+      <%= render partial: 'comments/comment', collection: @comments %>
     <% end %>
       <%= render partial: 'comments/form', locals: {topic: @topic, post: @post} %>
   </div>
