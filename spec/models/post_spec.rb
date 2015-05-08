@@ -4,7 +4,8 @@
    describe "vote methods" do
  
      before do
-       @post = associated_post
+       @user = create(:user)
+			    @post = create(:post, user: @user)
        3.times { @post.votes.create(value: 1) }
        2.times { @post.votes.create(value: -1) }
      end
