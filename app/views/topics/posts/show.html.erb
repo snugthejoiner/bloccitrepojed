@@ -10,8 +10,13 @@
      </small>
     <p><%= markdown_to_html @post.body %></p>
     <%= image_tag(@post.image.url) if @post.image? %>
+    <h2>Comments</h2>
+    <div class='js-comments'>
       <%= render partial: 'comments/comment', collection: @comments %>
+    </div>
+    <div class='new-comment'>
       <%= render partial: 'comments/form', locals: {topic: @topic, post: @post} %>
+    </div>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
